@@ -7,29 +7,44 @@
     android:background="@color/splash"
     tools:context=".UserDetailActivity">
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:hint="UserName"
-        android:textColorHint="@color/orange"
-        android:textColor="@color/white"
+        android:layout_margin="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="UserName"
+            android:textColorHint="@color/orange"
+            android:textColor="@color/white" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/password"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Password"
-        android:textColorHint="@color/orange"
-        android:textColor="@color/white"
+        android:layout_margin="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/username"/>
+        app:layout_constraintTop_toBottomOf="@id/username"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColorHint="@color/orange"
+            android:textColor="@color/white"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
 
 
     <Button android:id="@+id/save"

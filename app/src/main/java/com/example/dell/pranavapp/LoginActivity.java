@@ -3,6 +3,7 @@ package com.example.dell.pranavapp;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText loginUsername;
-    private EditText loginPassword;
+    private TextInputLayout loginUsername;
+    private TextInputLayout loginPassword;
     private Button loginBttn;
 
     private static String usernameCredential = "NCCS";
@@ -37,8 +38,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String username;
         String password;
 
-        username=loginUsername.getText().toString();
-        password=loginPassword.getText().toString();
+        username=loginUsername.getEditText().getText().toString();
+        password=loginPassword.getEditText().getText().toString();
 
         if(username.equals(usernameCredential)&& password.equals(passwordCredential)){
             Intent intent=new Intent(this,UserDetailActivity.class);
